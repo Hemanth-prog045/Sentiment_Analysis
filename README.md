@@ -2,6 +2,8 @@
 predict sentiment based on user input
 
 #Create virtual environment
+
+
 python3 -m venv venv
 
 # Activate virtual environment
@@ -9,6 +11,7 @@ python3 -m venv venv
 ./venv/Scripts/Activate
 
 # Install neccessary packages
+
 pip install -r requirements.txt
 
 # run the flask application 
