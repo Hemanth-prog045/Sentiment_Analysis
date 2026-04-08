@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Detection</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #f1f3f6;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #fafbfb;
+        padding: 15px 30px;
+        z-index: 1000;
+    }
+
+    .navbar-brand {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #110f0f;
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-brand i {
+        margin-right: 10px;
+    }
+
+    .navbar-nav .nav-link {
+        color: #121416 !important;
+        padding: 10px 20px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover {
+        background-color: #00b894;
+        border-radius: 5px;
+        color: #212529;
+    }
+
+    #about {
+        padding: 120px 0;
+        background: linear-gradient(45deg, #ffffff, #bac3c8);
+        color: white;
+    }
+
+    #about h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 40px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        
+    }
+
+    .content {
+        margin-top: 40px;
+        text-align: justify;
+        line-height: 1.8;
+        color: #161313;
+    }
+
+    .content h3 {
+        font-size: 2.2rem;
+        color: #0e1010;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    .content p {
+        font-size: 1.5rem;
+        color: #171515;
+        margin-bottom: 20px;
+    }
+
+    .content p:hover {
+        color: #fff;
+        transition: color 0.3s ease;
+    }
+
+    .content img {
+        width: 100%;
+        max-width: 800px;
+        border-radius: 85px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+        margin-bottom:30px;
+        transition: transform 0.3s ease;
+    }
+
+    .content img:hover {
+        transform: scale(1.05);
+    }
+
+    .card {
+        border-radius: 15px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        margin-top: 20px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .card-body {
+        padding: 25px;
+    }
+
+    .card-body h4 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .card-body p {
+        font-size: 1.1rem;
+        color: #777;
+        line-height: 1.6;
+    }
+
+    .card-img-top {
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    footer {
+        background-color: #051c24;
+        color: #ffffff;
+        padding: 30px 0;
+        text-align: center;
+    }
+
+    footer p {
+        font-size: 1.2rem;
+    }
+
+    .btn-custom {
+        background-color: #00b894;
+        color: white;
+        border-radius: 30px;
+        padding: 10px 30px;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+        background-color: #1abc9c;
+    }
+
+    @media (max-width: 768px) {
+        .navbar-brand {
+            font-size: 1.5rem;
+        }
+
+        .navbar-nav .nav-link {
+            padding: 8px 15px;
+        }
+
+        .content h3 {
+            font-size: 1.5rem;
+        }
+
+        .content p {
+            font-size: 1rem;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-img-top {
+            height: 200px;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+    }
+
+.navbar-logo {
+    width: 50px;
+    height: 50px;
+}
+
+h3 {
+    color: black;
+}
+</style>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="" class="navbar-logo">
+            Sentiment Analysis
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="/index">Upload</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/chart">Chart</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="about">
+    <div class="container">
+        <h2>About Sentiment Analysis</h2>
+
+        <div class="content">
+
+            <h3>What is Sentiment Analysis For Mental Health Detection From Social Media Text?</h3>
+
+            <p>
+                Sentiment analysis is a natural language processing technique used to determine the emotional tone behind a body of text.
+            </p>
+
+            <p>
+                By leveraging Deep learning algorithms, sentiment analysis can process large volumes of social media data.
+            </p>
+
+            <center>
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="Sentiment Analysis">
+            </center>
+
+            <h3>Importance of Early Detection</h3>
+
+            <p>
+                Early detection of mental health issues is crucial for effective treatment and support.
+            </p>
+
+            <p>
+                Sentiment analysis helps identify patterns of distress and emotional changes.
+            </p>
+
+            <h3>How CNN-LSTM Enhances Mental Health Detection</h3>
+
+            <p>
+                CNN-LSTM is a deep learning model known for speed and accuracy in analyzing text data.
+            </p>
+
+            <p>
+                It enables real-time monitoring and detection of mental health signals.
+            </p>
+
+            <center>
+                <img src="https://previews.123rf.com/images/hopefulprospects/hopefulprospects2002/hopefulprospects200200011/140073142-customer-satisfaction-icon-feedback-emoticons-scale-happy-face-level-flat-pictogram.jpg" alt="Deep Learning">
+            </center>
+
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Sentiment Analysis for Mental Health Detection. All Rights Reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

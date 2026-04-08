@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Index</title>
+    
+    <!-- Load stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1f3a52, #a8d0e9);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #fbfbfb;
+            padding: 20px 0;
+        }
+
+        /* Navbar Styling */
+nav {
+    background-color: #fbfbfb; /* Light background for a clean look */
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar Link Styling */
+nav a {
+    color: #121212; /* Dark text color for contrast */
+    font-size: 18px; /* Regular font size */
+    font-weight: 600; /* Medium weight for prominence */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Spacing for a clean, modern look */
+    padding: 10px 20px;
+    margin: 0 10px; /* Add spacing between links */
+    transition: color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    display: inline-block;
+    
+}
+
+/* Navbar Link Hover Effect */
+nav a:hover {
+    color: #1abc9c; /* Green color on hover */
+    transform: scale(1.1); /* Slight zoom-in effect */
+}
+
+/* Centering Navbar Links */
+nav .navbar-nav {
+    justify-content: center;
+}
+
+/* Navbar Brand Styling */
+nav .navbar-brand {
+    font-size: 28px; /* Larger brand name for emphasis */
+    font-weight: bold;
+    color: #151313; /* Darker shade for brand text */
+    letter-spacing: 2px; /* Spacing for clarity */
+    display: flex;
+    align-items: center;
+}
+
+/* Navbar Brand Icon Styling */
+nav .navbar-brand i {
+    color: #1abc9c; /* Green icon color to match hover effect */
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 32px; /* Icon size increased for balance */
+    transition: color 0.3s ease;
+}
+
+/* Navbar Brand Hover Effect */
+nav .navbar-brand:hover i {
+    color: #3498db; /* Change icon color when the brand is hovered */
+}
+
+/* Active Navbar Link */
+nav .navbar-nav .nav-item.active a {
+    color: #3498db; /* Highlight the active link */
+    font-weight: bold;
+}
+
+
+
+
+        /* Hero Section Styling */
+        .hero {
+            text-align: center;
+            padding: 120px 20px;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* 🔥 Updated Form */ .upload-form { background-color: rgba(0, 0, 0, 0.7); padding: 40px; border-radius: 15px; box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3); width: 100%; max-width: 600px; /* replaced fixed width */ } /* 🔥 Textarea instead of input */ .upload-form textarea { background-color: #34495e; color: #fff; padding: 15px; font-size: 18px; border-radius: 5px; width: 100%; border: 2px solid transparent; resize: none; height: 120px; transition: 0.3s; } .upload-form textarea:focus { background-color: #16a085; border: 2px solid #3498db; outline: none; } /* Character counter */ .char-count { font-size: 13px; text-align: right; margin-top: 5px; color: #ccc; } /* Button improved */ .upload-form button { background-color: #3498db; color: #fff; font-size: 18px; padding: 12px; border: none; border-radius: 5px; margin-top: 15px; width: 100%; transition: 0.3s; } .upload-form button:hover { background-color: #2980b9; transform: scale(1.05); }
+        /* Footer Styling */
+        footer {
+            background-color: #34495e;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        footer p {
+            color: #ecf0f1;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        footer p a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .upload-form {
+                padding: 30px;
+                margin-top: 20px;
+            }
+
+            .upload-form input[type="file"],
+            .upload-form button {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" >
+            <!-- <i class="fas fa-leaf"></i>--> Mental Health Detection 
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="/">Home</a>
+                </li>
+                {% if session.get('role') == 'admin' %}
+                <li class="nav-item">
+                <a class="nav-link" href="/admin">Admin</a>
+                </li>
+                {% endif %}
+                {% if session.get('name') %}
+                <li class="nav-item">
+                        <span style="color: black;">👤 {{ session.get('name') }}</span>
+                        <a href="{{ url_for('logout') }}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item"></li>
+                        <a class="nav-link"  href="/register" class="btn btn-primary">Register</a>
+                            </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  href="/login" class="btn btn-success">Login</a>
+                    </li>
+                    {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+    <h1>Enter Text for Sentiment Detection</h1>
+<div class="upload-form"> 
+    <form action="{{ url_for('predict') }}" method="post"> 
+        <!-- 🔥 TEXTAREA --> 
+         <textarea id="text_input" name="text_input" maxlength="100" placeholder="Enter your text here (max 100 characters)..." required></textarea> 
+         <!-- 🔥 Character counter --> <div class="char-count"> <span id="charCount">0</span>/100 </div> 
+          <button type="submit">Search</button> </form> 
+          {% if prediction %} 
+          <div class="alert alert-info mt-3"> 
+            <strong>Input:</strong> {{ user_text }} <br> 
+            <strong>Result:</strong> {{ prediction }} 
+        </div> 
+        {% endif %} 
+    </div>
+    
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sentiment Analysis for Mental Health. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+
+<style>
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f4f6f9;
+}
+
+/* NAVBAR SAME AS HOME */
+.navbar{
+box-shadow:0px 4px 6px rgba(0,0,0,0.1);
+border-bottom:2px solid #0056b3;
+padding:1.2rem 2rem;
+}
+
+.nav-link{
+font-size:1.3rem;
+margin-right:1rem;
+}
+
+.navbar-brand{
+font-size:2rem;
+font-weight:bold;
+}
+
+.navbar-icon{
+width:3rem;
+margin-right:8px;
+}
+
+/* ADMIN SECTION */
+
+.admin-section{
+margin-top:80px;
+}
+
+.card{
+border-radius:12px;
+box-shadow:0px 5px 12px rgba(0,0,0,0.1);
+}
+
+.table th{
+background:#0056b3;
+color:white;
+}
+
+.table td{
+vertical-align:middle;
+}
+
+.admin-title{
+font-size:2.5rem;
+font-weight:700;
+color:#2c3e50;
+}
+
+footer{
+margin-top:50px;
+background:#333;
+color:#fff;
+padding:20px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container-fluid">
+
+<a class="navbar-brand" href="/">
+<img src="/static/ic2.png" class="navbar-icon">
+Sentiment Analysis for Mental Health
+</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNav">
+
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="/">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="/index">Predict</a>
+</li>
+
+{% if session.get('role') == 'admin' %}
+<li class="nav-item">
+<a class="nav-link active" href="/admin">Admin</a>
+</li>
+{% endif %}
+
+{% if session.get('name') %}
+<li class="nav-item">
+<span class="nav-link">👤 {{ session.get('name') }}</span>
+</li>
+
+<li class="nav-item">
+<a class="nav-link text-danger" href="{{ url_for('logout') }}">Logout</a>
+</li>
+
+{% else %}
+
+<li class="nav-item">
+<a class="nav-link" href="/login">Login</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="/register">Register</a>
+</li>
+
+{% endif %}
+
+</ul>
+</div>
+</div>
+</nav>
+
+
+<!-- ADMIN DASHBOARD -->
+<div class="container admin-section">
+
+<h2 class="text-center admin-title mb-5">
+Admin Dashboard - User Management
+</h2>
+
+<div class="card p-4">
+
+<h4 class="mb-3">Registered Users</h4>
+
+<table class="table table-bordered table-striped">
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Email</th>
+<th>Role</th>
+</tr>
+</thead>
+
+<tbody>
+
+{% for user in users %}
+
+<tr>
+<td>{{ user.id }}</td>
+<td>{{ user.name }}</td>
+<td>{{ user.email }}</td>
+<td>
+{% if user.role == 'admin' %}
+<span class="badge bg-danger">Admin</span>
+{% else %}
+<span class="badge bg-primary">User</span>
+{% endif %}
+</td>
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer class="text-center">
+<p>© 2026 Sentiment Analysis for Mental Health. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
